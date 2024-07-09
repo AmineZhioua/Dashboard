@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33f8496b80.js" crossorigin="anonymous"></script>
+    <title>Dashboard | Settings</title>
+</head>
+<body>
+    <div class="page">
+        <!-- Start Sidebar Section -->
+        <div class="sidebar">
+            <h3>Elzero</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>           
+                    <a href="profile.html">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>                 
+                    <a href="files.html">
+                        <i class="fa-regular fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End Siderbar Section -->
+
+        <!-- Start Main Content Section -->
+        <div class="content">
+            <!-- Start Header Section -->
+            <div class="header">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search" placeholder="Type a Keyword">
+                </div>
+                <div class="user">
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="assets/avatar.png" alt="user-avatar">
+                </div>
+            </div>
+            <!-- End Header Section -->
+            <div class="heading">
+                <h1>Settings</h1>
+            </div>
+            <div class="cards">
+                <!-- First Setting Widget Section -->
+                <div class="card setting-1">
+                    <div class="head">
+                        <h2>Site Control</h2>
+                        <p>Control The Website If There Is Maintenance</p>
+                    </div>
+                    <div class="site-control">
+                        <div class="text">
+                            <h4>Website Control</h4>
+                            <p>Open/Close Website And Type The Reason</p>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked />
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea name="close-messsage" id="close-message" placeholder="Close Message Content"></textarea>
+                </div>
+                <!-- End First Setting Widget Section -->
+
+                <!-- Second Setting Widget Section -->
+                <div class="card setting-2">
+                    <div class="head">
+                        <h2>General Info</h2>
+                        <p>General Information About Your Account</p>
+                    </div>
+                    <div class="first">
+                        <label for="first-name">First Name</label>
+                        <input type="text" placeholder="First Name" name="first-name">
+                    </div>
+                    <div class="last">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" placeholder="Last Name" name="last-name">
+                    </div>
+                    <div class="email">
+                        <div class="inputs">
+                            <label for="mail">Email</label>
+                            <input type="email" placeholder="example@mail.com" name="mail" disabled>
+                        </div>
+                        <a href="#">Change</a>
+                    </div>
+                </div>
+                <!-- End Second Setting Widget Section -->
+
+                <!-- Third Setting Widget Section -->
+                <div class="card setting-3">
+                    <div class="head">
+                        <h2>Security Info</h2>
+                        <p>Security Information About Your Account</p>
+                    </div>
+                    <div class="password">
+                        <div class="text">
+                            <h4>Password</h4>
+                            <p>Last Change On 25/10/2021</p>
+                        </div>
+                        <a href="#" class="change">Change</a>
+                    </div>
+                    <div class="two-factor">
+                        <div class="text">
+                            <h4>Two-Factor Authentication</h4>
+                            <p>Enable/Disable The Feature</p>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked />
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="devices">
+                        <div class="text">
+                            <h4>Devices</h4>
+                            <p>Check The Login Devices List</p>
+                        </div>
+                        <a href="#" class="list-devices">Devices</a>
+                    </div>
+                </div>
+                <!-- End Third Setting Widget Section -->
+
+                <!-- Fourth Setting Widget Section -->
+                <div class="card setting-4">
+                    <div class="head">
+                        <h2>Social Info</h2>
+                        <p>Social Media Info</p>
+                    </div>
+                    <div class="social-user">
+                        <i class="fa-brands fa-twitter"></i>
+                        <input type="text" name="twitter" placeholder="Twitter Username">
+                    </div>
+                    <div class="social-user">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <input type="text" name="facebook" placeholder="Facebook Username">
+                    </div>
+                    <div class="social-user">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <input type="text" name="linkedin" placeholder="LinkedIn Username">
+                    </div>
+                    <div class="social-user">
+                        <i class="fa-brands fa-youtube"></i>
+                        <input type="text" name="youtube" placeholder="Youtube Username">
+                    </div>
+                </div>
+                <!-- End Fourth Setting Widget Section -->
+
+                <!-- Fifth Setting Widget Section -->
+                 <div class="card setting-5">
+                    <div class="head">
+                        <h2>Widgets Control</h2>
+                        <p>Show/Hide Widgets</p>
+                    </div>
+                    <div class="boxes">
+                        <div class="box">
+                            <input type="checkbox" checked>
+                            <label for="quick-draft">Quick Draft</label>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" checked>
+                            <label for="yearly-targets">Yearly Targets</label>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" checked>
+                            <label for="tickets-statistics">Tickets Statistics</label>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox">
+                            <label for="latest-news">Latest News</label>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" checked>
+                            <label for="latest-tasks">Latest Tasks</label>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" checked>
+                            <label for="top-search-items">Top Search Items</label>
+                        </div>
+                    </div>
+                 </div>
+                <!-- End Fifth Setting Widget Section -->
+
+                <!-- Sixth Setting Widget Section -->
+                <div class="card setting-6">
+                    <div class="head">
+                        <h2>Backup Manager</h2>
+                        <p>Control Backup Time And Location</p>
+                    </div>
+                    <div class="radios">
+                        <div class="radio-btn">
+                            <input type="radio" name="Time">
+                            <label for="daily">Daily</label>
+                        </div>
+                        <div class="radio-btn">
+                            <input type="radio" name="Time" checked>
+                            <label for="weekly">Weekly</label>
+                        </div>
+                        <div class="radio-btn">
+                            <input type="radio" name="Time">
+                            <label for="monthly">Monthly</label>
+                        </div>
+                    </div>
+                    <div class="servers">
+                        <input type="radio">
+                        <div class="server">
+                            <i class="fa-solid fa-server"></i>
+                            <h4>Megaman</h4>
+                        </div>
+                        <input type="radio">
+                        <div class="server">
+                            <i class="fa-solid fa-server"></i>
+                            <h4>Sigma</h4>
+                        </div>
+                        <input type="radio">
+                        <div class="server">
+                            <i class="fa-solid fa-server"></i>
+                            <h4>Alpha</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Sixth Setting Widget Section -->
+            </div>
+        </div>
+        <!-- End Main Content Section -->
+    </div>
+</body>

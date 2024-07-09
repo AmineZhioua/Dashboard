@@ -1,0 +1,2278 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+/* End Global Rules */
+
+/* #################### Start Sidebar Styling #################### */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 4px 0px 5px #0000001a;
+    z-index: 1;
+}
+
+.sidebar h3 {
+    padding: 10px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sidebar h3::before {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    background-color: black;
+    width: 50%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sidebar h3::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border: 6px solid white;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.sidebar ul li {
+    display: flex;
+    transition: 0.3s;
+    border-radius: 6px;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:hover {
+    background-color: #eee;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+.sidebar ul li a span {
+    padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar h3 {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .sidebar h3::before,
+    .sidebar h3::after {
+        display: none;
+    }
+    .sidebar ul li {
+        justify-content: center;
+    }
+    .sidebar ul li a span {
+        display: none;
+    }
+}
+/* #################### End Sidebar Styling #################### */
+
+/* #################### Start Header Styling #################### */
+
+/* Content Styling */
+.content {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+/* Header Styling */
+.header {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .search input {
+    padding: 10px 15px 10px 30px;
+    border-radius: 10px;
+    width: 160px;
+    border: 1px solid rgb(207, 207, 207);
+    transition: 0.5s;
+}
+
+.header .search input::placeholder:focus {
+    color: white;
+}
+
+.header .search input:focus {
+    width: 210px;
+    border: none;
+}
+
+.header .search i {
+    color: rgb(150, 150, 150);
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header .user {
+    display: flex;
+    align-items: center;
+}
+
+.header .user img {
+    height: 35px;
+    margin-left: 20px;
+}
+
+.header .user i {
+    font-size: 22px;
+    position: relative;
+}
+
+.header .user i::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    top: -10px;
+    right: -5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+/* Content Styling */
+.content .heading {
+    padding: 10px;
+}
+
+.content .heading h1 {
+    font-size: 32px;
+    margin: 10px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.content .heading h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    background-color: white;
+    width: 140px;
+}
+
+.content .heading h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    background-color: black;
+    width: 50px;
+}
+
+/* Cards Styling */
+.content .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.content .cards .card {
+    flex-basis: 49%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1189px) {
+    .content .cards .card {
+        flex-basis: 100%;
+    }
+}
+
+/* ######################### First Card Styling ######################### */
+.content .cards .card .welcome {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+
+.content .cards .card .welcome img {
+    height: 120px;
+}
+
+.content .cards .card .welcome h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.content .cards .card .welcome p {
+    color: #888;
+}
+
+.content .cards .card .avatar {
+    height: 70px;
+    width: 70px;
+    margin-left: 30px;
+    margin-top: -36px;
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px #51515172;
+}
+
+.content .cards .card .info {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.content .cards .card .info div h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.content .cards .card .info div p {
+    color: #888;
+    font-size: 14px;
+}
+
+.content .cards .card .btn {
+    margin: 0 15px 25px auto;
+    transition: 0.5s;
+    text-decoration: none;
+    background-color: #0075ff;
+    color: white;
+    border-radius: 5px;
+    padding: 4px 13px;
+    font-size: 14px;
+    display: flex;
+    width: fit-content;
+}
+
+.content .cards .card .btn:hover {
+    background-color: #004a9e;
+}
+
+/* Media Query For The First Card */
+@media (max-width: 767px) {
+    .content .cards .card-1 {
+        display: block;
+        text-align: center;
+    }
+    .content .cards .card .welcome {
+        padding-bottom: 30px;
+    }
+    .content .cards .card .welcome img {
+        display: none;
+    }
+    .content .cards .card .info {
+        flex-direction: column;
+    }
+    .content .cards .card .info div:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    .content .cards .card .avatar {
+        margin-left: 0;
+    }
+}
+/* ######################### End First Card Styling ######################### */
+
+/* ######################### Second Widget Card Styling ######################### */
+.content .card-2 .title {
+    padding: 15px 15px;
+}
+
+.content .card-2 .title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.content .card-2 .title p {
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content .card-2 .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.content .card-2 .inputs input {
+    margin-bottom: 15px;
+    background-color: #eeeeee;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.content .card-2 .inputs textarea {
+    background-color: #eeeeee;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    height: 150px;
+}
+
+.content .card-2 a {
+    margin: 20px 15px 25px auto;
+    transition: 0.5s;
+    text-decoration: none;
+    background-color: #0075ff;
+    color: white;
+    border-radius: 5px;
+    padding: 4px 13px;
+    font-size: 14px;
+    display: flex;
+    width: fit-content;
+}
+
+.content .card-2 a:hover {
+    background-color: #004a9e;
+}
+/* ######################### End Second Widget Card Styling ######################### */
+
+/* ######################### Third Widget Card Styling ######################### */
+.content .card-3 .title {
+    padding: 15px 15px;
+}
+
+.content .card-3 .title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.content .card-3 .title p {
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-3 .targets {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.card-3 .targets i {
+    height: 80px;
+    width: 80px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-3 .targets .money,
+.card-3 .targets .projects {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.card-3 .targets .team {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.card-3 .targets .money i {
+    background-color: #cce3ff;
+    color: #0075ff;
+}
+
+.card-3 .targets .projects i {
+    background-color: #fdecce;
+    color: #f59300;
+}
+
+.card-3 .targets .team i {
+    background-color: #d3f3df;
+    color: #22c55e;
+}
+
+.card-3 .targets .stats {
+    margin-left: 15px;
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.card-3 .targets .stats h6 {
+    font-size: 15px;
+}
+
+
+.card-3 .targets .stats .prog {
+    height: 4px;
+    width: 95%;
+    margin-top: 8px;
+    display: flex;
+}
+
+/* Money Progress Styling */
+.card-3 .targets .money .stats .prog {
+    background-color: #cce3ff;
+    position: relative;
+}
+
+.card-3 .targets .money .stats .prog .bar {
+    width: 80%;
+    height: 100%;
+    background-color: #0075ff;
+    position: relative;
+}
+
+.card-3 .targets .money .prog .bar span {
+    position: absolute;
+    background-color: #0075ff;
+    color: white;
+    top: -30px;
+    right: -4%;
+    padding: 0 2px;
+    border-radius: 5px;
+}
+
+.card-3 .targets .money .prog .bar span::before {
+    content: "";
+    border-style: solid;
+    border-width: 8px;
+    border-color: #0075ff transparent transparent;
+    position: absolute;
+    top: 22px;
+    left: 34%;
+}
+
+/* Projects Progress Styling */
+.card-3 .targets .projects .stats .prog {
+    background-color: #fdecce;
+}
+
+.card-3 .targets .projects .stats .prog .bar {
+    width: 55%;
+    height: 4px;
+    background-color: #f59300;
+    position: relative;
+}
+
+.card-3 .targets .projects .prog .bar span {
+    position: absolute;
+    background-color: #f59300;
+    color: white;
+    top: -30px;
+    right: -7%;
+    padding: 0 2px;
+    border-radius: 5px;
+}
+
+.card-3 .targets .projects .prog .bar span::before {
+    content: "";
+    border-style: solid;
+    border-width: 8px;
+    border-color: #f59300 transparent transparent;
+    position: absolute;
+    top: 22px;
+    left: 20%;
+}
+
+/* Team Progress Styling */
+.card-3 .targets .team .stats .prog {
+    background-color: #d3f3df;
+}
+
+.card-3 .targets .team .stats .prog .bar {
+    width: 80%;
+    height: 4px;
+    background-color: #22c55e;
+    position: relative;
+}
+
+.card-3 .targets .team .prog .bar span {
+    position: absolute;
+    background-color: #22c55e;
+    color: white;
+    top: -30px;
+    right: -5%;
+    padding: 0 2px;
+    border-radius: 5px;
+}
+
+.card-3 .targets .team .prog .bar span::before {
+    content: "";
+    border-style: solid;
+    border-width: 8px;
+    border-color: #22c55e transparent transparent;
+    position: absolute;
+    top: 22px;
+    left: 20%;
+}
+/* ######################### End Third Widget Card Styling ######################### */
+
+/* ######################### Fourth Widget Card Styling ######################### */
+.content .card-4 .title {
+    padding: 15px 15px;
+}
+
+.content .card-4 .title h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.content .card-4 .title p {
+    color: #888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content .card-4 .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 10px;
+    align-items: center;
+}
+
+.content .card-4 .stats .box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    flex-basis: 47%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .content .card-4 .stats .box {
+        flex-basis: 100%;
+    }
+}
+.content .card-4 .stats .box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.content .card-4 .stats .box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+/* ######################### End Fourth Widget Card Styling ######################### */
+
+/* ######################### Fifth Widget Card Styling ######################### */
+.content .card-5 {
+    padding: 15px;
+}
+
+.content .card-5 .title {
+    margin-bottom: 15px;
+}
+
+.content .card-5 .title h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.content .card-5 .new {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.content .card-5 .new:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.content .card-5 .new img {
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.content .card-5 .new .text {
+    flex-grow: 1;
+}
+
+.content .card-5 .new .text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.content .card-5 .new .text p {
+    font-size: 15px;
+    color: #888;
+}
+
+.content .card-5 .new .box {
+    background-color: #eee;
+    font-size: 13px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .content .card-5 .new {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content .card-5 .new img {
+        margin-bottom: 8px;
+    }
+    .content .card-5 .new .text {
+        margin-bottom: 10px;
+    }
+}
+/* ######################### End Fifth Widget Card Styling ######################### */
+
+/* ######################### Sixth Widget Card Styling ######################### */
+.content .card-6 {
+    padding: 15px;
+}
+
+.content .card-6 .title {
+    margin-bottom: 15px;
+}
+
+.content .card-6 .title h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.content .card-6 .task {
+    display: flex;
+    align-items: center;
+}
+
+.content .card-6 .task:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.content .card-6 .task .detail {
+    flex-grow: 1;
+}
+
+.content .card-6 .task .detail h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.content .card-6 .task .detail p {
+    color: #888;
+    font-size: 17px;
+}
+
+.content .card-6 .task i {
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.content .card-6 .task i:hover {
+    color: red;
+}
+
+.content .card-6 .crossed .detail h4 {
+    color: #eee;
+}
+
+.content .card-6 .crossed .detail p {
+    color: #eee;
+}
+
+.content .card-6 .crossed i {
+    color: #eee;
+}
+/* ######################### End Sixth Widget Card Styling ######################### */
+
+/* ######################### Seventh Widget Card Styling ######################### */
+.content .card-7 {
+    padding: 15px;
+}
+
+.content .card-7 h2 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.content .card-7 .item:first-of-type {
+    color: #888;
+}
+
+.content .card-7 .item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.content .card-7 .item:not(:first-of-type) p:last-of-type {
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+/* ######################### End Seventh Widget Card Styling ######################### */
+
+/* ######################### Eighth Widget Card Styling ######################### */
+.content .card-8 {
+    padding: 15px;
+}
+
+.content .card-8 h2 {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.content .card-8 .file {
+    display: flex;
+    align-items: center;
+}
+
+.content .card-8 .file:not(:last-of-type) {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.content .card-8 .file img {
+    height: 40px;
+    margin-right: 15px;
+}
+
+.content .card-8 .file .f-detail {
+    flex-grow: 1;
+}
+
+.content .card-8 .file .f-detail h4 {
+    font-weight: 500;
+}
+
+.content .card-8 .file .f-detail p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .card-8 .file .box {
+    background-color: #eee;
+    font-size: 14px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+/* ######################### End Eighth Widget Card Styling ######################### */
+
+/* ######################### Start Ninth Widget Card Styling ######################### */
+.content .card-9 {
+    padding: 15px;
+    position: relative;
+}
+
+.content .card-9 h2 {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.content .card-9 ul {
+    padding: 15px 0;
+    position: relative;
+}
+
+.content .card-9 ul::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    background-color: #0075ff;
+}
+
+.content .card-9 ul li {
+    display: flex;
+    align-items: center;
+}
+
+.content .card-9 ul li:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+/* Styling Of The Elements That Are Done */
+.content .card-9 ul li.done::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0075ff;
+    border: 2px solid white;
+    outline: 2px solid #0075ff;
+    margin-right: 15px;
+    z-index: 1;
+}
+
+/* Styling Of The Element Undone */
+.content .card-9 ul li.current::before {
+    animation: color-changing 0.8s alternate infinite;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 2px solid #0075ff;
+    margin-right: 15px;
+    z-index: 1;
+}
+
+@keyframes color-changing {
+    0% {
+        background-color: #0075ff;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+/* Styling Of The Element Pending */
+.content .card-9 ul li.pending::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid #0075ff;
+    margin-right: 15px;
+    z-index: 1;
+}
+
+.content .card-9 img {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    height: 140px;
+    opacity: 30%;
+}
+
+@media (max-width: 769px) {
+    .content .card-9 img {
+        display: none;
+    }
+}
+/* ######################### End Ninth Widget Card Styling ######################### */
+
+/* ######################### Start Tenth Widget Card Styling ######################### */
+.content .card-10 {
+    padding: 15px;
+}
+
+.content .card-10 h2 {
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.content .card-10 .remind {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.content .card-10 .remind:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.content .card-10 .remind span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.content .card-10 .remind .detail {
+    padding: 0 15px;
+}
+
+.content .card-10 .remind .detail h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.content .card-10 .remind .detail p {
+    color: #888;
+}
+/* ######################### End Tenth Widget Card Styling ######################### */
+
+/* ######################### Eleventh Widget Card Styling ######################### */
+.content .card-11 {
+    padding: 15px;
+}
+
+.content .card-11 h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.content .card-11 .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.content .card-11 .user img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.content .card-11 .user .cred h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.content .card-11 .user .cred p {
+    color: #888;
+}
+
+.content .card-11 .quote {
+    font-weight: 500;
+    padding-top: 25px;
+    padding-inline: 10px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.content .card-11 .interact {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #888;
+}
+
+.content .card-11 .interact .likes,
+.content .card-11 .interact .comments {
+    display: flex;
+    align-items: center;
+}
+
+.content .card-11 .interact i {
+    margin-right: 8px;
+}
+
+@media (max-width: 769px) {
+    .content .card-11 .quote {
+        text-align: center;
+    }
+}
+/* ######################### End Eleventh Widget Card Styling ######################### */
+
+/* ######################### Twelfth Widget Card Styling ######################### */
+.content .card-12 {
+    padding: 15px;
+}
+
+.content .card-12 h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.content .card-12 .social {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.content .card-12 .social:hover {
+    opacity: 50%;
+}
+
+.content .card-12 .social i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.content .card-12 .social h4 {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-weight: 400;
+}
+
+.content .card-12 .social a {
+    color: white;
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+/* ######################### End Twelfth Widget Card Styling ######################### */
+
+/* ######################### Start Projects Table Styling ######################### */
+.project-table {
+    background-color: white;
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.project-table h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-table .responsive-table {
+    overflow-x: auto;
+}
+
+.project-table table {
+    width: 100%;
+    min-width: 1000px;
+    border-spacing: 0;
+}
+
+.project-table table thead td {
+    padding: 15px;
+    background-color: #eee;
+    font-weight: 500;
+}
+
+.project-table table tbody td {
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+.project-table table tbody tr {
+    transition: 0.3s;
+}
+
+.project-table table tbody tr:hover {
+    background-color: #eee;
+}
+
+.project-table table tbody td img {
+    height: 30px;
+    border-radius: 50%;
+    outline: 3px solid white;
+}
+
+.project-table table tbody td img:not(:first-child) {
+    margin-left: -15px;
+}
+
+.project-table table tbody td .pending {
+    color: white;
+    font-size: 14px;
+    background-color: #f59300;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.project-table table tbody td .in-progress {
+    color: white;
+    font-size: 14px;
+    background-color: #0075ff;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.project-table table tbody td .completed {
+    color: white;
+    font-size: 14px;
+    background-color: #22c55e;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.project-table table tbody td .rejected {
+    color: white;
+    font-size: 14px;
+    background-color: red;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+/* ######################### End Projects Table Styling ######################### */
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################## Settings Page Styling ##################### */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+/* ######################### Start First Setting Card Styling ######################### */
+.content .cards .setting-1 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .cards .setting-1 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-1 .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-1 .site-control {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content .cards .setting-1 .site-control .text {
+    flex-grow: 1;
+}
+
+.content .cards .setting-1 .site-control .text h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.content .cards .setting-1 .site-control .text p {
+    font-size: 13px;
+    color: #888;
+}
+
+.content .cards .setting-1 textarea {
+    border: 1px solid #ccc;
+    padding: 15px;
+    flex-grow: 1;
+}
+/* ######################### End First Setting Card Styling ######################### */
+
+/* ######################### Start Second Setting Card Styling ######################### */
+.content .cards .setting-2 {
+    padding: 15px;
+}
+
+.content .cards .setting-2 .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-2 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-2 .head p {
+    color: #888;
+    font-size: 15px;
+}
+.content .cards .setting-2 .first,
+.content .cards .setting-2 .last {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.content .cards .setting-2 label {
+    color: #888;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.content .cards .setting-2 input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 15px 10px;
+    height: 35px;
+}
+
+.content .cards .setting-2 .email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .cards .setting-2 .email .inputs {
+    flex-grow: 1;
+}
+
+.content .cards .setting-2 .email .inputs input {
+    background-color: #0077ff16;
+    margin-top: 10px;
+}
+.content .cards .setting-2 .email a {
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 8px;
+    color: #0075ff;
+}
+
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: #0075ff;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    left: 50px;
+    color: #0075ff;
+}
+/* ######################### End Second Setting Card Styling ######################### */
+
+/* ######################### Start Third Setting Card Styling ######################### */
+.content .cards .setting-3 {
+    padding: 15px;
+}
+
+.content .cards .setting-3 .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-3 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-3 .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-3 .password,
+.content .cards .setting-3 .two-factor,
+.content .cards .setting-3 .devices {
+    display: flex;
+    align-items: center;
+}
+
+.content .cards .setting-3 .password,
+.content .cards .setting-3 .two-factor {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.content .cards .setting-3 .password .text,
+.content .cards .setting-3 .two-factor .text,
+.content .cards .setting-3 .devices .text {
+    flex-grow: 1;
+}
+
+.content .cards .setting-3 .text h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.content .cards .setting-3 .text p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-3 .change {
+    color: white;
+    font-size: 14px;
+    padding: 4px 9px;
+    background-color: #0075ff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content .cards .setting-3 .list-devices {
+    color: black;
+    font-size: 14px;
+    padding: 4px 9px;
+    background-color: #eee;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* ######################### End Third Setting Card Styling ######################### */
+
+/* ######################### Start Fourth Setting Card Styling ######################### */
+.content .cards .setting-4 {
+    padding: 15px;
+}
+
+.content .cards .setting-4 .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-4 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-4 .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-4 .social-user {
+    display: flex;
+    align-items: center;
+}
+
+.content .cards .setting-4 .social-user:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-4 .social-user i {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.content .cards .setting-4 .social-user input {
+    height: 40px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #eee;
+}
+/* ######################### End Fourth Setting Card Styling ######################### */
+
+/* ######################### Start Fifth Setting Card Styling ######################### */
+.content .cards .setting-5 {
+    padding: 15px;
+}
+
+.content .cards .setting-5 .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-5 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-5 .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-5 .boxes .box {
+    font-size: 17px;
+}
+
+.content .cards .setting-5 .boxes .box:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.content .cards .setting-5 .boxes .box input {
+    margin-right: 10px;
+}
+/* ######################### End Fifth Setting Card Styling ######################### */
+
+/* ######################### Start Sixth Setting Card Styling ######################### */
+.content .cards .setting-6 {
+    padding: 15px;
+}
+
+.content .cards .setting-6 .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .setting-6 .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .setting-6 .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .setting-6 .radios {
+    border-bottom: 1px solid #eee;
+}
+
+.content .cards .setting-6 .radios .radio-btn {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.content .cards .setting-6 .radios .radio-btn input {
+    margin-right: 8px;
+}
+
+.content .cards .setting-6 .servers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content .cards .setting-6 .servers .server {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content .cards .setting-6 .servers .server:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+@media (max-width: 769px) {
+    .content .cards .setting-6 .servers {
+        display: block;
+    }
+}
+
+.content .cards .setting-6 .servers .server:hover {
+    color: #0075ff;
+    border: 1px solid #0075ff;
+}
+
+.content .cards .setting-6 .servers input[type="radio"] {
+    appearance: none;
+}
+
+.content .cards .setting-6 .servers input[type="radio"]:checked + .server {
+    background-color: #0075ff;
+}
+
+/* ######################### End Sixth Setting Card Styling ######################### */
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################ End Settings Page Styling ################### */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################ Start Profile Page Styling ################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+/* ######################### Start First Profile Card Styling ######################### */
+.content .cards .profile-1 {
+    padding: 15px;
+    flex-basis: 100%;
+    display: flex;
+}
+
+.content .cards .profile-1 .profile-pic {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+    margin: auto;
+}
+
+.content .cards .profile-1 .profile-pic img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+.content .cards .profile-1 .profile-pic h3 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.content .cards .profile-1 .profile-pic p {
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .profile-pic .line {
+    height: 6px;
+    width: 40%;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.content .cards .profile-1 .profile-pic span {
+    content: "";
+    position: absolute;
+    background-color: #0075ff;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+}
+.content .cards .profile-1 .profile-pic .stars {
+    color: orange;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.content .cards .profile-1 .info-box {
+    width: 100%;
+}
+
+/* General Infomation Styling */
+.content .cards .profile-1 .general-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .general-info p {
+    color: #888;
+    font-size: 15px;
+}
+.content .cards .profile-1 .general-info p:first-child {
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .general-info p:not(:first-child) {
+    color: black;
+}
+
+.content .cards .profile-1 .general-info .details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .cards .profile-1 .general-info .details div:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.content .cards .profile-1 .general-info .details .name,
+.content .cards .profile-1 .general-info .details .gender,
+.content .cards .profile-1 .general-info .details .country {
+    display: flex;
+}
+
+/* Personal Information Styling */
+.content .cards .profile-1 .personal-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .personal-info p {
+    color: #888;
+    font-size: 15px;
+}
+.content .cards .profile-1 .personal-info p:first-child {
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .personal-info p:not(:first-child) {
+    color: black;
+}
+
+.content .cards .profile-1 .personal-info .details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .cards .profile-1 .personal-info .details div:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.content .cards .profile-1 .personal-info .details .email,
+.content .cards .profile-1 .personal-info .details .phone,
+.content .cards .profile-1 .personal-info .details .birth {
+    display: flex;
+}
+
+/* Job Information Styling */
+.content .cards .profile-1 .job-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .job-info p {
+    color: #888;
+    font-size: 15px;
+}
+.content .cards .profile-1 .job-info p:first-child {
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .job-info p:not(:first-child) {
+    color: black;
+}
+
+.content .cards .profile-1 .job-info .details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .cards .profile-1 .job-info .details div:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.content .cards .profile-1 .job-info .details .job,
+.content .cards .profile-1 .job-info .details .language,
+.content .cards .profile-1 .job-info .details .experience {
+    display: flex;
+}
+
+/* Billing Information Styling */
+.content .cards .profile-1 .bill-info {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+}
+
+.content .cards .profile-1 .bill-info p {
+    color: #888;
+    font-size: 15px;
+}
+.content .cards .profile-1 .bill-info p:first-child {
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-1 .bill-info p:not(:first-child) {
+    color: black;
+}
+
+.content .cards .profile-1 .bill-info .details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .cards .profile-1 .bill-info .details div:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.content .cards .profile-1 .bill-info .details .method,
+.content .cards .profile-1 .bill-info .details .mail,
+.content .cards .profile-1 .bill-info .details .subs {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .content .cards .profile-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content .cards .profile-1 .profile-pic {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    .content .cards .profile-1 .personal-info,
+    .content .cards .profile-1 .general-info,
+    .content .cards .profile-1 .bill-info,
+    .content .cards .profile-1 .job-info {
+        align-items: center;
+    }
+}
+
+@media (max-width: 469px) {
+    .content .cards .profile-1 .profile-pic img {
+        width: 90px;
+    }
+    .content .cards .profile-1 {
+        padding: 15px 5px;
+    }
+}
+/* ######################### End First Profile Card Styling ######################### */
+
+/* ######################### Start Second Profile Card Styling ######################### */
+.content .cards .profile-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Skills Card Styling */
+.content .cards .profile-2 .skills {
+    flex-basis: 40%;
+    padding: 15px;
+}
+
+.content .cards .profile-2 .skills .head {
+    margin-bottom: 20px;
+}
+
+.content .cards .profile-2 .skills .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-2 .skills .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .profile-2 .skills .skill {
+    display: flex;
+    padding-top: 20px;
+}
+
+.content .cards .profile-2 .skills .skill:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.content .cards .profile-2 .skills .skill p {
+    color: black;
+    font-size: 13px;
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.content .cards .profile-2 .skills .skill p:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+@media (max-width: 769px) {
+    .content .cards .profile-2 .skills {
+        flex-basis: 100%;
+    }
+}
+
+/* Activities Card Styling */
+.content .cards .profile-2 .activities {
+    flex-basis: 58%;
+    padding: 15px;
+}
+
+.content .cards .profile-2 .activities .head h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .cards .profile-2 .activities .head p {
+    color: #888;
+    font-size: 15px;
+}
+
+.content .cards .profile-2 .activities .activity {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.content .cards .profile-2 .activities .activity:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.content .cards .profile-2 .activities .activity img {
+    width: 70px;
+}
+
+.content .cards .profile-2 .activities .activity .text-1 {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.content .cards .profile-2 .activities .activity .text-1 h5,
+.content .cards .profile-2 .activities .activity .text-2 h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.content .cards .profile-2 .activities .activity .text-1 p,
+.content .cards .profile-2 .activities .activity .text-2 p {
+    color: #888;
+    font-size: 15px;
+}
+
+@media (max-width: 769px) {
+    .content .cards .profile-2 .activities {
+        flex-basis: 100%;
+    }
+}
+/* ######################### End Second Profile Card Styling ######################### */
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################ End Profile Page Styling #################### */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################ Start Projects Page Styling ################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+
+/* First Project Styling */
+.content .cards .project-1,
+.content .cards .project-2,
+.content .cards .project-3,
+.content .cards .project-4 {
+    padding: 15px;
+}
+
+.content .cards .project-1 .project-info,
+.content .cards .project-2 .project-info,
+.content .cards .project-3 .project-info,
+.content .cards .project-4 .project-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .cards .project-1 .project-info .name, 
+.content .cards .project-2 .project-info .name,
+.content .cards .project-3 .project-info .name, 
+.content .cards .project-4 .project-info .name {
+    flex-grow: 1;
+}
+
+.content .cards .project-1 .project-info p,
+.content .cards .project-2 .project-info p,
+.content .cards .project-3 .project-info p,
+.content .cards .project-4 .project-info p {
+    color: #888;
+    font-size: 14px;
+}
+
+.content .cards .project-1 .project-info h5,
+.content .cards .project-2 .project-info h5,
+.content .cards .project-3 .project-info h5,
+.content .cards .project-4 .project-info h5 {
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.content .cards .project-1 .team,
+.content .cards .project-2 .team,
+.content .cards .project-3 .team,
+.content .cards .project-4 .team {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+.content .cards .project-1 .team img,
+.content .cards .project-2 .team img,
+.content .cards .project-3 .team img,
+.content .cards .project-4 .team img {
+    width: 35px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.content .cards .project-1 .team img:hover,
+.content .cards .project-2 .team img:hover,
+.content .cards .project-3 .team img:hover,
+.content .cards .project-4 .team img:hover {
+    z-index: 1;
+}
+
+.content .cards .project-1 .team img:not(:first-of-type),
+.content .cards .project-2 .team img:not(:first-of-type),
+.content .cards .project-3 .team img:not(:first-of-type),
+.content .cards .project-4 .team img:not(:first-of-type) {
+    margin-left: -15px;
+}
+
+.content .cards .project-1 .tags,
+.content .cards .project-2 .tags,
+.content .cards .project-3 .tags,
+.content .cards .project-4 .tags {
+    display: flex;
+    padding: 15px 0;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
+.content .cards .project-1 .tags p,
+.content .cards .project-2 .tags p,
+.content .cards .project-3 .tags p,
+.content .cards .project-4 .tags p {
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    margin: 5px 5px 5px 0;
+    background-color: #eee;
+}
+
+.content .cards .project-1 .bottom-line,
+.content .cards .project-2 .bottom-line,
+.content .cards .project-3 .bottom-line,
+.content .cards .project-4 .bottom-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.content .cards .project-1 .bottom-line .prog,
+.content .cards .project-2 .bottom-line .prog,
+.content .cards .project-3 .bottom-line .prog,
+.content .cards .project-4 .bottom-line .prog {
+    position: relative;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    width: 220px;
+    margin-right: 5px;
+}
+
+.content .cards .project-1 .bottom-line .prog span,
+.content .cards .project-2 .bottom-line .prog span,
+.content .cards .project-3 .bottom-line .prog span,
+.content .cards .project-4 .bottom-line .prog span {
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.content .cards .project-1 .bottom-line p,
+.content .cards .project-2 .bottom-line p,
+.content .cards .project-3 .bottom-line p,
+.content .cards .project-4 .bottom-line p {
+    color: #888;
+    font-size: 13px;
+}
+
+@media (max-width: 767px) {
+    .content .cards .project-1 .bottom-line,
+    .content .cards .project-2 .bottom-line,
+    .content .cards .project-3 .bottom-line,
+    .content .cards .project-4 .bottom-line {
+        justify-content: center;
+    }
+    .content .cards .project-1 .tags,
+    .content .cards .project-2 .tags,
+    .content .cards .project-3 .tags,
+    .content .cards .project-4 .tags {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 469px) {
+    .content .cards .project-1 .bottom-line .prog,
+    .content .cards .project-2 .bottom-line .prog,
+    .content .cards .project-3 .bottom-line .prog,
+    .content .cards .project-4 .bottom-line .prog {
+        margin-bottom: 10px;
+    }
+}
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################ End Projects Page Styling ################### */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+
+
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+/* ################# Start Files Page Styling ################### */
+/* ############################################################## */
+/* ############################################################## */
+/* ############################################################## */
+.content .all-files {
+    display: flex;
+    margin: 20px;
+}
+
+.content .files {
+    flex: 1;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@media (min-width: 1096px) {
+    .content .files {
+        margin-right: 20px;
+    }
+}
+
+.content .files .file-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content .files .file-1 .icon {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .files .file-1 .icon img{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.content .files .file-1 p {
+    color: #888;
+    font-size: 14px;
+}
+
+.content .files .file-1 .pg {
+    margin-bottom: 10px;
+}
+
+.content .files .file-1 .date {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Files Statistics Styling */
+.content .file-stats {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    height: 400px;
+}
+
+.content .file-stats h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content .file-stats .box {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.content .file-stats .box i {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0 117 255 / 20%);
+    color: #0075ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.content .file-stats .box .text {
+    flex-grow: 1;
+}
+
+.content .file-stats .box .text p:first-child {
+    color: black;
+    font-size: 15px;
+}
+
+.content .file-stats .box .text p:last-child {
+    color: #888;
+    font-size: 14px;
+}
+
+.content .file-stats .box p:last-child {
+    color: #888;
+    font-size: 14px;
+}
+
+.content .file-stats .up-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .file-stats .up-btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    background-color: #0075ff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.content .file-stats .up-btn a i {
+    margin-right: 5px;
+}
+
+.content .file-stats .up-btn a:hover i {
+    animation: up-to-down 0.8s infinite;
+}
+
+@keyframes up-to-down {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1099px) {
+    .content .all-files {
+        flex-direction: column-reverse;
+    }
+    .content .file-stats {
+        margin: 15px 0;
+    }
+}

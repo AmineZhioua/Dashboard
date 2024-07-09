@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33f8496b80.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="page">
+        <!-- Start Sidebar Section -->
+        <div class="sidebar">
+            <h3>Elzero</h3>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>           
+                    <a href="profile.html">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="project.html">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>                 
+                    <a href="files.html">
+                        <i class="fa-regular fa-file"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End Siderbar Section -->
+
+        <!-- Start Content Section -->
+        <div class="content">
+            <!-- Start Header Section -->
+            <div class="header">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search" placeholder="Type a Keyword">
+                </div>
+                <div class="user">
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="assets/avatar.png" alt="user-avatar">
+                </div>
+            </div>
+            <!-- End Header Section -->
+            <div class="heading">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="cards">
+                <!-- Start First Widget Card Section -->
+                <div class="card card-1">
+                    <div class="welcome">
+                        <div class="text">
+                            <h2>Welcome</h2>
+                            <p>Admin</p>
+                        </div>
+                        <img src="assets/welcome.png" alt="background">
+                    </div>
+                    <img src="assets/avatar.png" alt="image" class="avatar">
+                    <div class="info">
+                        <div>
+                            <h5>Amine Zhioua</h5>
+                            <p>Developer</p>
+                        </div>
+                        <div>
+                            <h5>80</h5>
+                            <p>Projects</p>
+                        </div>
+                        <div>
+                            <h5>$8500</h5>
+                            <p>Earned</p>
+                        </div>
+                    </div>
+                    <a href="profile.html" class="btn">Profile</a>
+                </div>
+                <!-- End First Widget Card Section -->
+
+                <!-- Start Second Widget Card Section -->
+                <div class="card card-2">
+                    <div class="title">
+                        <h2>Quick Draft</h2>
+                        <p>Write A Draft For Your Ideas</p>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="title" placeholder="Title">
+                        <textarea name="thought" id="thought" placeholder="Your Thoughts"></textarea>
+                    </div>
+                    <a href="#">Save</a>
+                </div>
+                <!-- End Second Widget Card Section -->
+                <!-- Start Third Widget Card Section -->
+                 <div class="card card-3">
+                    <div class="title">
+                        <h2>Yearly Targets</h2>
+                        <p>Targets Of The Year</p>
+                    </div>
+                    <div class="targets">
+                        <div class="money">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="stats">
+                                <h6>Money</h6>
+                                <p>20.000$</p>
+                                <div class="prog">
+                                    <span class="bar">
+                                        <span>80%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects">
+                            <i class="fa-solid fa-code"></i>
+                            <div class="stats">
+                                <h6>Projects</h6>
+                                <p>24</p>
+                                <div class="prog">
+                                    <span class="bar">
+                                        <span>55%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team">
+                            <i class="fa-solid fa-user-group"></i>
+                            <div class="stats">
+                                <h6>Team</h6>
+                                <p>12</p>
+                                <div class="prog">
+                                    <span class="bar">
+                                        <span>75%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <!-- End Third Widget Card Section -->
+
+                <!-- Start Fourth Widget Card Section -->
+                <div class="card card-4">
+                    <div class="title">
+                        <h2>Tickets Statistics</h2>
+                        <p>Everything About Support Tickets</p>
+                    </div>
+                    <div class="stats">
+                        <div class="box">
+                            <i class="fa-regular fa-rectangle-list" style="color: #f59300;"></i>
+                            <h3>2500</h3>
+                            <p>Total</p>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-spinner" style="color: #0075ff;"></i>
+                            <h3>500</h3>
+                            <p>Pending</p>
+                        </div>
+                        <div class="box">
+                            <i class="fa-regular fa-circle-check" style="color: #22c55e;"></i>
+                            <h3>1900</h3>
+                            <p>Closed</p>
+                        </div>
+                        <div class="box">
+                            <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
+                            <h3>100</h3>
+                            <p>Deleted</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Fourth Widget Card Section -->
+                
+                <!-- Start Fifth Widget Card Section -->
+                <div class="card card-5">
+                    <div class="title">
+                        <h2>Latest News</h2>
+                    </div>
+                    <div class="new">
+                        <img src="assets/news/news-01.png" alt="news-01">
+                        <div class="text">
+                            <h3>Created SASS Section</h3>
+                            <p>New SASS Examples & Tutorials</p>
+                        </div>
+                        <p class="box">3 Days Ago</p>
+                    </div>
+                    <div class="new">
+                        <img src="assets/news/news-02.png" alt="news-02">
+                        <div class="text">
+                            <h3>Changed The Design</h3>
+                            <p>A Brand New Website Design</p>
+                        </div>
+                        <p class="box">5 Days Ago</p>
+                    </div>
+                    <div class="new">
+                        <img src="assets/news/news-03.png" alt="news-03">
+                        <div class="text">
+                            <h3>Team Increased</h3>
+                            <p>3 Developers Joined The Team</p>
+                        </div>
+                        <p class="box">7 Days Ago</p>
+                    </div>
+                    <div class="new">
+                        <img src="assets/news/news-04.png" alt="news-04">
+                        <div class="text">
+                            <h3>Added Payment Gateway</h3>
+                            <p>Many New Payment Gateways Added</p>
+                        </div>
+                        <p class="box">9 Days Ago</p>
+                    </div>
+                </div>
+                <!-- End Fifth Widget Card Section -->
+                
+                <!-- Start Sixth Widget Card Section -->
+                <div class="card card-6">
+                    <div class="title">
+                        <h2>Latest Tasks</h2>
+                    </div>
+                    <div class="task">
+                        <div class="detail">
+                            <h4>Record One New Video</h4>
+                            <p>Record Python Create Exe Project</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="task">
+                        <div class="detail">
+                            <h4>Write Article</h4>
+                            <p>Write Low Level vs High Level Languages</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="task">
+                        <div class="detail">
+                            <h4>Finish Project</h4>
+                            <p>Publish Academy Programming Project</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="task crossed">
+                        <div class="detail">
+                            <h4><s>Attend The Meeting</s></h4>
+                            <p><s>Attend The Project Business Analysis Meeting</s></p>
+                        </div>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="task">
+                        <div class="detail">
+                            <h4>Finish Lesson</h4>
+                            <p>Finish Teaching Flex Box</p>
+                        </div>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                </div>
+                <!-- End Sixth Widget Card Section -->
+
+                <!-- Start Seventh Widget Card Section -->
+                <div class="card card-7">
+                    <h2>Top Search Items</h2>
+                    <div class="item">
+                        <p>Keyword</p>
+                        <p>Search Count</p>
+                    </div>
+                    <div class="item">
+                        <p>Programming</p>
+                        <p>220</p>
+                    </div>
+                    <div class="item">
+                        <p>JavaScript</p>
+                        <p>180</p>
+                    </div>
+                    <div class="item">
+                        <p>PHP</p>
+                        <p>160</p>
+                    </div>
+                    <div class="item">
+                        <p>Code</p>
+                        <p>145</p>
+                    </div>
+                    <div class="item">
+                        <p>Design</p>
+                        <p>110</p>
+                    </div>
+                    <div class="item">
+                        <p>Logic</p>
+                        <p>95</p>
+                    </div>
+                </div>
+                <!-- End Seventh Widget Card Section -->
+
+                <!-- Start Eighth Widget Card Section -->
+                <div class="card card-8">
+                    <h2>Latest Uploads</h2>
+                    <div class="file">
+                        <img src="assets/Uploads/pdf.svg" alt="file-02">
+                        <div class="f-detail">
+                            <h4>My-File.pdf</h4>
+                            <p>Elzero</p>
+                        </div>
+                        <p class="box">2.9MB</p>
+                    </div>
+                    <div class="file">
+                        <img src="assets/Uploads/psd.svg" alt="file-03">
+                        <div class="f-detail">
+                            <h4>My-Psd-File.psd</h4>
+                            <p>Osama</p>
+                        </div>
+                        <p class="box">1.2GB</p>
+                    </div>
+                    <div class="file">
+                        <img src="assets/Uploads/zip.svg" alt="file-04">
+                        <div class="f-detail">
+                            <h4>My-Zip-File.psd</h4>
+                            <p>User</p>
+                        </div>
+                        <p class="box">52.5MB</p>
+                    </div>
+                    <div class="file">
+                        <img src="assets/Uploads/dll.svg" alt="file-05">
+                        <div class="f-detail">
+                            <h4>My-DLL-File.psd</h4>
+                            <p>Admin</p>
+                        </div>
+                        <p class="box">30MB</p>
+                    </div>
+                    <div class="file">
+                        <img src="assets/Uploads/eps.svg" alt="file-06">
+                        <div class="f-detail">
+                            <h4>My-Eps-File.psd</h4>
+                            <p>Designer</p>
+                        </div>
+                        <p class="box">8.9MB</p>
+                    </div>
+                </div>
+                <!-- End Eighth Widget Card Section -->
+
+                <!-- Start Ninth Widget Card Section -->
+                <div class="card card-9">
+                    <h2>Last Project Progress</h2>
+                    <ul>
+                        <li class="done">Got The Project</li>
+                        <li class="done">Started The Project</li>
+                        <li class="done">The Project About To Finish</li>
+                        <li class="current">Test The Project</li>
+                        <li class="pending">Finish The Project & Get Money</li>
+                    </ul>
+                    <img src="assets/project.png" alt="project-image">
+                </div>
+                <!-- End Ninth Widget Card Section -->
+
+                <!-- Start Tenth Widget Card Section -->
+                <div class="card card-10">
+                    <h2>Reminders</h2>
+                    <div class="remind">
+                        <span style="background-color: #0075ff;"></span>
+                        <div class="detail" style="border-left: 2px solid #0075ff;">
+                            <h4>Check My Tasks List</h4>
+                            <p>28/09/2022 - 12:00am</p>
+                        </div>
+                    </div>
+                    <div class="remind">
+                        <span style="background-color: #f59300;"></span>
+                        <div class="detail" style="border-left: 2px solid #f59300;">
+                            <h4>Check My Projects</h4>
+                            <p>26/10/2022 - 12:00am</p>
+                        </div>
+                    </div>
+                    <div class="remind">
+                        <span style="background-color: #22c55e;"></span>
+                        <div class="detail" style="border-left: 2px solid #22c55e;">
+                            <h4>Call All My Clients</h4>
+                            <p>05/11/2022 - 12:00am</p>
+                        </div>
+                    </div>
+                    <div class="remind">
+                        <span style="background-color: red;"></span>
+                        <div class="detail" style="border-left: 2px solid red;">
+                            <h4>Finish The Development Workshop</h4>
+                            <p>20/12/2022 - 12:00am</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Tenth Widget Card Section -->
+
+                <!-- Start Eleventh Widget Card Section -->
+                <div class="card card-11">
+                    <h2>Latest Post</h2>
+                    <div class="user">
+                        <img src="assets/avatar.png" alt="avatar">
+                        <div class="cred">
+                            <h4>Amine Zhioua</h4>
+                            <p>About 2 Hours Ago</p>
+                        </div>
+                    </div>
+                    <p class="quote">As A Well Spent Day Brings Happy Sleep, So Life Well Used Brings Happy Death.</p>
+                    <div class="interact">
+                        <div class="likes">
+                            <i class="fa-regular fa-heart"></i>
+                            <p>2.6K</p>
+                        </div>
+                        <div class="comments">
+                            <i class="fa-regular fa-comments"></i>
+                            <p>500</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Eleventh Widget Card Section -->
+
+                <!-- Start Twelfth Widget Card Section -->
+                <div class="card card-12">
+                    <h2>Social Media Stats</h2>
+                    <div class="social" style="background-color: #d2ecfc;">
+                        <i class="fa-brands fa-twitter" style="background-color: #1da1f2;"></i>
+                        <h4 style="color: #2a91f0;">90K Followers</h4>
+                        <a href="#" style="background-color: #1da1f2;">Follow</a>
+                    </div>
+                    <div class="social" style="background-color: #d1e4fc;">
+                        <i class="fa-brands fa-facebook-f" style="background-color: #1877f2;"></i>
+                        <h4 style="color: #008cef;">2M Likes</h4>
+                        <a href="#" style="background-color: #008cef;">Like</a>
+                    </div>
+                    <div class="social" style="background-color: #ffcccc;">
+                        <i class="fa-brands fa-youtube" style="background-color: red;"></i>
+                        <h4 style="color: red;">1M Subscribes</h4>
+                        <a href="#" style="background-color: red;">Subscribe</a>
+                    </div>
+                </div>
+                <!-- End Twelfth Widget Card Section -->
+            </div>
+            <!-- Start Table Section -->
+            <div class="project-table">
+                <h2>Projects</h2>
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <td>Name</td>
+                            <td>Finish Date</td>
+                            <td>Client</td>
+                            <td>Price</td>
+                            <td>Team</td>
+                            <td>Status</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ministry Wikipedia</td>
+                                <td>10 May 2022	</td>
+                                <td>Ministry</td>
+                                <td>$5300</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-01.png" alt="">
+                                    <img src="assets/Team/team-02.png" alt="">
+                                    <img src="assets/Team/team-03.png" alt="">
+                                    <img src="assets/Team/team-04.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="pending">Pending</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MyTek</td>
+                                <td>2 October 2023</td>
+                                <td>MyTek Company</td>
+                                <td>$2800</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-03.png" alt="">
+                                    <img src="assets/Team/team-04.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="in-progress">In Progress</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tanit Coffee</td>
+                                <td>2 June 2024</td>
+                                <td>Elhaj Company</td>
+                                <td>$4500</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-05.png" alt="">
+                                    <img src="assets/Team/team-01.png" alt="">
+                                    <img src="assets/Team/team-04.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="completed">Completed</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Designet Formation</td>
+                                <td>12 January 2024</td>
+                                <td>Startup</td>
+                                <td>$1000</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-01.png" alt="">
+                                    <img src="assets/Team/team-02.png" alt="">
+                                    <img src="assets/Team/team-03.png" alt="">
+                                    <img src="assets/Team/team-04.png" alt="">
+                                    <img src="assets/Team/team-05.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="completed">Completed</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Meta Company</td>
+                                <td>18 Mars 2024</td>
+                                <td>Company</td>
+                                <td>$10,000</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-01.png" alt="">
+                                    <img src="assets/Team/team-02.png" alt="">
+                                    <img src="assets/Team/team-03.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="in-progress">In Progress</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apple Universe</td>
+                                <td>30 December 2021</td>
+                                <td>Company</td>
+                                <td>$4000</td>
+                                <td class="team">
+                                    <img src="assets/Team/team-01.png" alt="">
+                                    <img src="assets/Team/team-03.png" alt="">
+                                    <img src="assets/Team/team-05.png" alt="">
+                                </td>
+                                <td>
+                                    <span class="rejected">Rejected</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+            <!-- End Table Section -->
+        </div>
+        <!-- End Content Section -->
+    </div>
+</body>
+</html>
